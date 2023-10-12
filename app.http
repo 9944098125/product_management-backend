@@ -1,0 +1,79 @@
+#########CREATE USER
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name":"Teja Subramanyam",
+  "email":"teja3@yopmail.com",
+  "password":"Srinivas@8",
+  "is_admin":true
+}
+
+#######GET USERS
+GET http://localhost:5000/api/auth/users
+Content-Type: application/json
+
+#########LOGIN
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email":"johny@yopmail.com",
+  "password":"johny@123"
+}
+
+#######CREATE SHOP
+POST http://localhost:5000/api/shops/create/14
+Content-Type: application/json
+
+{
+  "name":"Varaha Milk Parlour",
+  "description":"Milk, Curd, Buttermilk, Lassi Packets"
+}
+
+############### GET SHOPS
+GET http://localhost:5000/api/shops
+Content-Type: application/json
+
+######## DELETE SHOP
+DELETE http://localhost:5000/api/shops/delete/18/12
+Content-Type: application/json
+
+########## UPDATE SHOP
+PUT http://localhost:5000/api/shops/update/16/12
+Content-Type: application/json
+
+{
+  "name":"Updated John Milk Parlour",
+  "description":"updated description"
+}
+
+######## CREATE PRODUCT
+POST http://localhost:5000/api/products/create/17/11
+Content-Type: application/json
+
+{
+   "name":"100 Pooja Gold Milk Packets",
+   "price":"Rs.26 each"
+}
+
+####### GET PRODUCTS
+GET http://localhost:5000/api/products/17
+Content-Type: application/json
+
+######### UPDATE PRODUCT
+PUT http://localhost:5000/api/products/update/18/12/1
+Content-Type: application/json
+
+{
+   "name":"Updated Product 100 Nandini Mango Lassi Packets",
+   "price":"Rs.16 each"
+}
+
+######## DELETE A PRODUCT
+DELETE http://localhost:5000/api/products/delete/17/11/14
+Content-Type: application/json
+
+#########DELETE ALL USERS
+DELETE http://localhost:5000/api/auth/delete
+Content-Type: application/json
